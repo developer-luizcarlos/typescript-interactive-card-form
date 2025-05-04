@@ -74,9 +74,9 @@
             type="text"
             placeholder="e.g. 124 5678 9123 0000"
             class="input-group__input"
-            id="input-cardNumber"
+            id="input-card-number"
           />
-          <small class="input-group__error-msg"
+          <small class="input-group__error-msg" id="error-card-number"
             >wrong format, numbers only</small
           >
         </div>
@@ -84,10 +84,20 @@
           <div class="input-group">
             <label class="input-group__label">exp. date (mm/yy)</label>
             <div class="block__row gap-small">
-              <input type="text" placeholder="MM" class="input-group__input" id="input-cardMonth" />
-              <input type="text" placeholder="YY" class="input-group__input" id="input-cardYear" />
+              <input
+                type="text"
+                placeholder="MM"
+                class="input-group__input"
+                id="input-card-month"
+              />
+              <input
+                type="text"
+                placeholder="YY"
+                class="input-group__input"
+                id="input-card-year"
+              />
             </div>
-            <small class="input-group__error-msg">can&apos;t be blank</small>
+            <small class="input-group__error-msg" id="error-card-expire">can&apos;t be blank</small>
           </div>
           <div class="input-group">
             <label class="input-group__label">cvc</label>
@@ -95,9 +105,9 @@
               type="text"
               placeholder="e.g. 123"
               class="input-group__input"
-              id="input-cardCvc"
+              id="input-card-cvc"
             />
-            <small class="input-group__error-msg">can&apos; be blank</small>
+            <small class="input-group__error-msg" id="error-card-cvc">can&apos; be blank</small>
           </div>
         </div>
         <button class="btn">confirm</button>

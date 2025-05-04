@@ -1,0 +1,14 @@
+"use strict";
+export const $inputCardHolder = document.querySelector("#input-cardholder");
+export const $inputCardNumber = document.querySelector("#input-card-number");
+export const $inputCardExpireMonth = document.querySelector("#input-card-month");
+export const $inputCardExpireYear = document.querySelector("#input-card-year");
+export const $inputCardCVC = document.querySelector("#input-card-cvc");
+export const $smallErrorCardNumber = document.querySelector("#error-card-number");
+export const $smallErrorCardExpire = document.querySelector(".error-card-expire");
+export const $smallErrorCardCVC = document.querySelector(".error-card-cvc");
+export const $btnSubmit = document.querySelector(".btn");
+export const $form = document.querySelector(".form");
+export const $spanCardNumbers = document.querySelectorAll(".card__number");
+export const $spanCardHolder = document.querySelector(".card__cardholder");
+export const $spanCardExpireDate = document.querySelector(".card__expire-date");

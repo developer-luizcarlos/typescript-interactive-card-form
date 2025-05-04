@@ -1,0 +1,13 @@
+export declare const $inputCardHolder: HTMLInputElement | null;
+export declare const $inputCardNumber: HTMLInputElement | null;
+export declare const $inputCardExpireMonth: HTMLInputElement | null;
+export declare const $inputCardExpireYear: HTMLInputElement | null;
+export declare const $inputCardCVC: HTMLInputElement | null;
+export declare const $smallErrorCardNumber: HTMLElement | null;
+export declare const $smallErrorCardExpire: HTMLElement | null;
+export declare const $smallErrorCardCVC: HTMLElement | null;
+export declare const $btnSubmit: HTMLButtonElement | null;
+export declare const $form: HTMLFormElement | null;
+export declare const $spanCardNumbers: NodeList | null;
+export declare const $spanCardHolder: HTMLElement | null;
+export declare const $spanCardExpireDate: HTMLElement | null;
