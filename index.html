@@ -12,5 +12,96 @@
     <link rel="stylesheet" href="src/styles/main.css" />
     <script defer type="module" src="build/scripts/main.js"></script>
   </head>
-  <body></body>
+  <body class="page">
+    <div class="page__decorative">
+      <div class="card__group">
+        <div class="card card--front">
+          <div class="card__header">
+            <img src="./src/images/card-logo.svg" alt="" />
+          </div>
+          <div class="card__footer">
+            <div class="card__number-group">
+              <div class="card__number-divisor">
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+              </div>
+              <div class="card__number-divisor">
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+              </div>
+              <div class="card__number-divisor">
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+              </div>
+              <div class="card__number-divisor">
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+                <span class="card__number">0</span>
+              </div>
+            </div>
+            <div class="card__info">
+              <span class="card__cardholder">jane appleseed</span>
+              <span class="card__expire-date">00/00</span>
+            </div>
+          </div>
+        </div>
+        <div class="card card--back">
+          <span class="card__civ">000</span>
+        </div>
+      </div>
+    </div>
+    <main class="page__main">
+      <form class="form">
+        <div class="input-group">
+          <label class="input-group__label">cardholder</label>
+          <input
+            type="text"
+            placeholder="e.g. Jane Appleseed"
+            class="input-group__input"
+            id="input-cardholder"
+          />
+        </div>
+        <div class="input-group">
+          <label class="input-group__label">card number</label>
+          <input
+            type="text"
+            placeholder="e.g. 124 5678 9123 0000"
+            class="input-group__input"
+            id="input-cardNumber"
+          />
+          <small class="input-group__error-msg"
+            >wrong format, numbers only</small
+          >
+        </div>
+        <div class="block__row gap-small">
+          <div class="input-group">
+            <label class="input-group__label">exp. date (mm/yy)</label>
+            <div class="block__row gap-small">
+              <input type="text" placeholder="MM" class="input-group__input" id="input-cardMonth" />
+              <input type="text" placeholder="YY" class="input-group__input" id="input-cardYear" />
+            </div>
+            <small class="input-group__error-msg">can&apos;t be blank</small>
+          </div>
+          <div class="input-group">
+            <label class="input-group__label">cvc</label>
+            <input
+              type="text"
+              placeholder="e.g. 123"
+              class="input-group__input"
+              id="input-cardCvc"
+            />
+            <small class="input-group__error-msg">can&apos; be blank</small>
+          </div>
+        </div>
+        <button class="btn">confirm</button>
+      </form>
+    </main>
+  </body>
 </html>

@@ -2,6 +2,161 @@
 @import url(./variables.css);
 
 body {
+  display: grid;
+  grid-template-columns: 30% 70%;
   font-family: var(--font-main);
   font-size: var(--font-normal-size);
+}
+
+.page__decorative {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: url(../images/bg-main-desktop.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__group {
+  position: absolute;
+  /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  right: -30%;
+  width: 120%;
+}
+
+.card {
+  border-radius: 10px;
+  height: 250px;
+  overflow: hidden;
+  width: 450px;
+}
+
+.card__number-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__number {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.card__info {
+  display: flex;
+  font-size: 1.5rem;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card__cardholder {
+  text-transform: uppercase;
+}
+
+.card--front {
+  align-self: flex-start;
+  background-image: url(../images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.card--back {
+  position: relative;
+  align-self: flex-end;
+  background-image: url(../images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__civ {
+  position: absolute;
+  top: 45%;
+  right: 10%;
+  color: var(--white);
+  letter-spacing: 1rem;
+  font-weight: 500;
+}
+
+.page__main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  width: max(400px, 35vw);
+}
+
+.form > * {
+  margin-block: 10px;
+}
+
+.input-group__label {
+  color: var(--very-dark-violet);
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.input-group__input {
+  border: 2px solid var(--light-grayish-violet);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.input-group__input::placeholder {
+  color: var(--light-grayish-violet);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.input-group__input:focus {
+  border: 2px solid transparent;
+  border-image: var(--gradient) 1;
+}
+
+.input-group__error-msg {
+  color: var(--red);
+  display: none;
+  font-weight: bold;
+}
+
+.input-group__error-msg--visible {
+  display: block;
+}
+
+.block__row {
+  display: flex;
+}
+
+.gap-small {
+  gap: 5px;
+}
+
+.btn {
+  background-color: var(--very-dark-violet);
+  border-radius: 5px;
+  color: var(--white);
+  cursor: pointer;
+  font-size: var(--font-main);
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 1.2rem;
+  width: 100%;
 }
