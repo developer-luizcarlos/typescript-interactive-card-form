@@ -56,6 +56,7 @@ export function updateCardExpireMonth(e: Event) {
   if (isInvalidMonth) {
     if ($smallErrorCardExpire) {
       $smallErrorCardExpire.classList.add("input-group__error-msg--visible");
+      $spanCardExpireMonth!.textContent = "00";
     }
 
     return;
@@ -67,7 +68,7 @@ export function updateCardExpireMonth(e: Event) {
   }
 
   if ($spanCardExpireMonth) {
-    $spanCardExpireMonth.textContent = value.length < 2 ? "0" + value : value;
+    $spanCardExpireMonth.textContent = value.padStart(2, "0");
   }
 }
 
@@ -80,6 +81,7 @@ export function updateCardExpireYear(e: Event) {
     if ($smallErrorCardExpire) {
       $smallErrorCardExpire.classList.add("input-group__error-msg--visible");
       $smallErrorCardExpire.textContent = `Can't be blank`;
+      $spanCardExpireYear!.textContent = "00";
     }
 
     return;
@@ -90,7 +92,7 @@ export function updateCardExpireYear(e: Event) {
   }
 
   if ($spanCardExpireYear) {
-    $spanCardExpireYear.textContent = value.length < 2 ? "0" + value : value;
+    $spanCardExpireYear.textContent = value.padStart(2, "0");
   }
 }
 
