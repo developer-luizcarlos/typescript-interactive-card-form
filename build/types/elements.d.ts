@@ -13,3 +13,4 @@ export declare const $spanCardHolder: HTMLElement | null;
 export declare const $spanCardExpireDate: HTMLElement | null;
 export declare const $spanCardExpireMonth: HTMLElement | null;
 export declare const $spanCardExpireYear: HTMLElement | null;
+export declare const $spanCardCVC: Element | null;

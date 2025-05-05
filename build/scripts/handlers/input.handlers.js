@@ -1,4 +1,4 @@
-import { $smallErrorCardExpire, $smallErrorCardNumber, $spanCardExpireMonth, $spanCardExpireYear, $spanCardHolder, $spanCardNumbers, } from "../elements.js";
+import { $smallErrorCardCVC, $smallErrorCardExpire, $smallErrorCardNumber, $spanCardCVC, $spanCardExpireMonth, $spanCardExpireYear, $spanCardHolder, $spanCardNumbers, } from "../elements.js";
 export function updateCardCardHolder(e) {
     if (!e)
         return;
@@ -64,5 +64,23 @@ export function updateCardExpireYear(e) {
     }
     if ($spanCardExpireYear) {
         $spanCardExpireYear.textContent = value.length < 2 ? "0" + value : value;
+    }
+}
+export function updateCardCVC(e) {
+    const inputElement = e.target;
+    const value = inputElement.value;
+    const isInvalidCVC = Number(value) === 0 || isNaN(Number(value)) || value.length < 3;
+    if (isInvalidCVC) {
+        if ($smallErrorCardCVC) {
+            $smallErrorCardCVC.classList.add("input-group__error-msg--visible");
+            $spanCardCVC.textContent = "000";
+        }
+        return;
+    }
+    if ($smallErrorCardCVC) {
+        $smallErrorCardCVC.classList.remove("input-group__error-msg--visible");
+    }
+    if ($spanCardCVC) {
+        $spanCardCVC.textContent = value.padStart(3, "0");
     }
 }

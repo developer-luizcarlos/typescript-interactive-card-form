@@ -14,3 +14,4 @@ export const $spanCardHolder = document.querySelector(".card__cardholder");
 export const $spanCardExpireDate = document.querySelector(".card__expire-date");
 export const $spanCardExpireMonth = document.querySelector("#expire-month");
 export const $spanCardExpireYear = document.querySelector("#expire-year");
+export const $spanCardCVC = document.querySelector(".card__cvc");

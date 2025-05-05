@@ -2,6 +2,7 @@
 
 import {
   $form,
+  $inputCardCVC,
   $inputCardExpireMonth,
   $inputCardExpireYear,
   $inputCardHolder,
@@ -11,6 +12,7 @@ import {
 import {
   updateCardCardHolder,
   updateCardCardNumber,
+  updateCardCVC,
   updateCardExpireMonth,
   updateCardExpireYear,
 } from "./handlers/input.handlers.js";
@@ -42,5 +44,11 @@ if ($inputCardExpireMonth) {
 if ($inputCardExpireYear) {
   $inputCardExpireYear.addEventListener("input", function (e: Event) {
     updateCardExpireYear(e);
+  });
+}
+
+if ($inputCardCVC) {
+  $inputCardCVC.addEventListener("input", function (e: Event) {
+    updateCardCVC(e);
   });
 }

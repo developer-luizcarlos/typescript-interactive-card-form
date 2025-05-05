@@ -28,3 +28,4 @@ export const $spanCardExpireMonth: HTMLElement | null =
   document.querySelector("#expire-month");
 export const $spanCardExpireYear: HTMLElement | null =
   document.querySelector("#expire-year");
+export const $spanCardCVC = document.querySelector(".card__cvc")
