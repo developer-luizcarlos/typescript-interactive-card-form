@@ -17,6 +17,7 @@ export function updateCardCardNumber(e) {
     if (isValueNaNOrEmpty) {
         if ($smallErrorCardNumber) {
             $smallErrorCardNumber.classList.add("input-group__error-msg--visible");
+            $spanCardNumbers?.forEach((cardNumber) => (cardNumber.textContent = "0"));
         }
         return;
     }
