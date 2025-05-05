@@ -1,4 +1,5 @@
 import { $smallErrorCardCVC, $smallErrorCardExpire, $smallErrorCardNumber, $spanCardCVC, $spanCardExpireMonth, $spanCardExpireYear, $spanCardHolder, $spanCardNumbers, } from "../elements.js";
+import { hasCardNumberError } from "../helpers/inputError.helper.js";
 export function updateCardCardHolder(e) {
     if (!e)
         return;
@@ -13,10 +14,13 @@ export function updateCardCardNumber(e) {
         return;
     const inputElement = e.target;
     const value = Number(inputElement.value);
-    const isValueNaNOrEmpty = isNaN(value) || value === 0;
-    if (isValueNaNOrEmpty) {
+    if (hasCardNumberError(value)) {
         if ($smallErrorCardNumber) {
             $smallErrorCardNumber.classList.add("input-group__error-msg--visible");
+            $smallErrorCardNumber.textContent =
+                value.toString().length < 16 && !isNaN(value)
+                    ? "Enter the full card number"
+                    : "wrong format, numbers only";
             $spanCardNumbers?.forEach((cardNumber) => (cardNumber.textContent = "0"));
         }
         return;
