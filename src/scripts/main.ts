@@ -1,10 +1,18 @@
 "use strict";
 
-import { $form, $inputCardHolder, $inputCardNumber } from "./elements.js";
+import {
+  $form,
+  $inputCardExpireMonth,
+  $inputCardExpireYear,
+  $inputCardHolder,
+  $inputCardNumber,
+} from "./elements.js";
 
 import {
   updateCardCardHolder,
   updateCardCardNumber,
+  updateCardExpireMonth,
+  updateCardExpireYear,
 } from "./handlers/input.handlers.js";
 
 if ($form) {
@@ -22,5 +30,17 @@ if ($inputCardHolder) {
 if ($inputCardNumber) {
   $inputCardNumber.addEventListener("input", function (e: Event) {
     updateCardCardNumber(e);
+  });
+}
+
+if ($inputCardExpireMonth) {
+  $inputCardExpireMonth.addEventListener("input", function (e: Event) {
+    updateCardExpireMonth(e);
+  });
+}
+
+if ($inputCardExpireYear) {
+  $inputCardExpireYear.addEventListener("input", function (e: Event) {
+    updateCardExpireYear(e);
   });
 }

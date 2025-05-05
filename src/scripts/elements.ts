@@ -12,9 +12,9 @@ export const $inputCardCVC: HTMLInputElement | null =
 export const $smallErrorCardNumber: HTMLElement | null =
   document.querySelector("#error-card-number");
 export const $smallErrorCardExpire: HTMLElement | null =
-  document.querySelector(".error-card-expire");
+  document.querySelector("#error-card-expire");
 export const $smallErrorCardCVC: HTMLElement | null =
-  document.querySelector(".error-card-cvc");
+  document.querySelector("#error-card-cvc");
 export const $btnSubmit: HTMLButtonElement | null =
   document.querySelector(".btn");
 export const $form: HTMLFormElement | null = document.querySelector(".form");
@@ -24,3 +24,7 @@ export const $spanCardHolder: HTMLElement | null =
   document.querySelector(".card__cardholder");
 export const $spanCardExpireDate: HTMLElement | null =
   document.querySelector(".card__expire-date");
+export const $spanCardExpireMonth: HTMLElement | null =
+  document.querySelector("#expire-month");
+export const $spanCardExpireYear: HTMLElement | null =
+  document.querySelector("#expire-year");

@@ -11,3 +11,5 @@ export declare const $form: HTMLFormElement | null;
 export declare const $spanCardNumbers: NodeList | null;
 export declare const $spanCardHolder: HTMLElement | null;
 export declare const $spanCardExpireDate: HTMLElement | null;
+export declare const $spanCardExpireMonth: HTMLElement | null;
+export declare const $spanCardExpireYear: HTMLElement | null;
