@@ -9,7 +9,10 @@ import {
   $spanCardNumbers,
 } from "../elements.js";
 
-import { hasCardNumberError } from "../helpers/inputError.helper.js";
+import {
+  hasCardExpireMonthError,
+  hasCardNumberError,
+} from "../helpers/inputError.helper.js";
 
 export function updateCardCardHolder(e: Event) {
   if (!e) return;
@@ -57,10 +60,7 @@ export function updateCardExpireMonth(e: Event) {
   const inputElement = e.target as HTMLInputElement;
   const value = inputElement.value;
 
-  const isInvalidMonth =
-    Number(value) === 0 || parseFloat(value) < 1 || parseFloat(value) > 12;
-
-  if (isInvalidMonth) {
+  if (hasCardExpireMonthError(Number(value))) {
     if ($smallErrorCardExpire) {
       $smallErrorCardExpire.classList.add("input-group__error-msg--visible");
       $spanCardExpireMonth!.textContent = "00";

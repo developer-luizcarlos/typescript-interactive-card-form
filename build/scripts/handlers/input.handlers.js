@@ -1,5 +1,5 @@
 import { $smallErrorCardCVC, $smallErrorCardExpire, $smallErrorCardNumber, $spanCardCVC, $spanCardExpireMonth, $spanCardExpireYear, $spanCardHolder, $spanCardNumbers, } from "../elements.js";
-import { hasCardNumberError } from "../helpers/inputError.helper.js";
+import { hasCardExpireMonthError, hasCardNumberError, } from "../helpers/inputError.helper.js";
 export function updateCardCardHolder(e) {
     if (!e)
         return;
@@ -38,8 +38,7 @@ export function updateCardCardNumber(e) {
 export function updateCardExpireMonth(e) {
     const inputElement = e.target;
     const value = inputElement.value;
-    const isInvalidMonth = Number(value) === 0 || parseFloat(value) < 1 || parseFloat(value) > 12;
-    if (isInvalidMonth) {
+    if (hasCardExpireMonthError(Number(value))) {
         if ($smallErrorCardExpire) {
             $smallErrorCardExpire.classList.add("input-group__error-msg--visible");
             $spanCardExpireMonth.textContent = "00";
